@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
 	dependencies: [
-		.package(url: "https://github.com/blodely/LYExt.git", from: "0.3.11")
+		.package(url: "https://github.com/blodely/LYExt.git", from: "0.3.11"),
 	],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

@@ -14,13 +14,17 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/blodely/LYExt.git", from: "0.3.14"),
+//        .package(url: "https://github.com/blodely/LYExt.git", from: "0.3.14"),
+		.package(url: "https://github.com/blodely/LYExt.git", branch: "master"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "LYAppCommon",
+			dependencies: [
+				.product(name: "LYExt", package: "LYExt"),
+			],
             swiftSettings: [
                 .enableUpcomingFeature("ApproachableConcurrency"),
             ],
